@@ -55,7 +55,7 @@ function renderTableHeader() {
   const headerRow = document.createElement('tr');
   headerRow.innerHTML = '<th>Location</th>';
 
-  for (let hour = 6; hour <= 20; hour++) {
+  for (let hour = 6; hour <= 20; hour++) { //got assistance for the hour in table from chat gpt
     const formattedHour = hour % 12 === 0 ? 12 : hour % 12;
     const amPm = hour < 12 ? 'am' : 'pm';
     const timeLabel = `${formattedHour} ${amPm}`;
