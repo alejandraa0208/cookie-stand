@@ -4,9 +4,19 @@ h1, h2 {
     color: black;
 }
 
+h1 {
+    font-size: 28px;
+    text-align: center;
+    padding: 20px;
+}
+
 ul, li {
     font-family: Arial, Helvetica, sans-serif;
-    color: burlywood;
+}
+
+body, h1, ul, table {
+    margin: 0;
+    padding: 0;
 }
 
 body, p {
@@ -14,10 +24,38 @@ body, p {
 }
 
 body {
-    color: black;
-    background-color: whitesmoke ;
+    color: #333;
+    background-color: #f5f5f5 ;
 }
 
 ul {
     background-color:beige ;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+th {
+    background-color: #ffadad;
+    color: #fff;
+}
+
+td {
+    background-color: #ffd6a5;
+}
+
+tr:nth-child(even) {
+    background-color: #ffe6b8;
+}
+
+tr:hover {
+    background-color: #ffb7b7;
 }
