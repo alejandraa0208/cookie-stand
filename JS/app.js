@@ -84,10 +84,29 @@ function renderTableFooter() {
   table.querySelector('tfoot').appendChild(footerRow);
 }
 
-renderSalesData();
-renderTableHeader();
-renderTableFooter();
+document.addEventListener('DOMContentLoaded', function () {
+  renderSalesData();
+  renderTableHeader();
+  renderTableFooter();
 
+  const newCookieStandForm = document.getElementById('new-cookie-stand-form');
+
+  newCookieStandForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const minCustomers = parseFloat(document.getElementById('min-customers').value);
+    const maxCustomers = parseFloat(document.getElementById('max-customers').value);
+    const avgCookiesPerSale = parseFloat(document.getElementById('avg-cookies').value);
+
+    const newCookieStandForm = new SalmonCookies(name, minCustomers,maxCustomers,avgCookiesPerSale);
+
+    newCookieStandForm.generateSalesData();
+    newCookieStandForm.render();
+
+    newCookieStandForm.reset();
+  });
+});
 
 
 
