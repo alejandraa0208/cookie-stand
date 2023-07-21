@@ -1,11 +1,16 @@
 
-h1, h2 {
+h1 {
     font-family: 'Ysabeau Infant', sans-serif;
     color: black;
+    font-size: 28px;
+    text-align: center;
+    padding: 20px;
 }
 
-h1 {
-    font-size: 28px;
+h2 {
+    font-family: 'Ysabeau Infant', sans-serif;
+    color: black;
+    font-size: 22px;
     text-align: center;
     padding: 20px;
 }
@@ -77,4 +82,20 @@ tr:hover {
     display: block;
     text-align: center;
     margin-top: 20px;
+    font-size: 35px;
+}
+
+.gallery {
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.gallery-images {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gallery-images img {
+    width: 150px;
+    margin: 10px;
 }
